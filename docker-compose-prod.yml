@@ -1,1 +1,7 @@
+version: '3.3'
+services:  
+  frontend:
+    image: assassinhua/docker-ci-basic
+    ports:
+      - "9999:80"
 
