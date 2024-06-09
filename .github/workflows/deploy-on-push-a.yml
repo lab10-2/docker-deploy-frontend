@@ -53,7 +53,7 @@ jobs:
           key: ${{ secrets.HOST_SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd /home/ubuntu/frontend
+            cd /home/ubuntu/frontend-prod
             echo ${{ secrets.DOCKER_HUB_TOKEN }} | docker login --username ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
             docker compose -f docker-compose-prod.yml down
             docker compose -f docker-compose-prod.yml pull
